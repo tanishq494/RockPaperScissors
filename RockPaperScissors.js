@@ -1,23 +1,18 @@
-// Rock, Paper, Scissors Game
 
-// Global variables to keep track of scores
-let humanScore = 0;
-let computerScore = 0;
-
-// Function to get computer's choice
 function getComputerChoice() {
   const choices = ["rock", "paper", "scissors"];
   const randomIndex = Math.floor(Math.random() * 3);
   return choices[randomIndex];
 }
 
-// Function to get human's choice
 function getHumanChoice() {
   const choice = prompt("Choose rock, paper, or scissors:").toLowerCase();
   return choice;
 }
 
-// Function to play a single round
+let humanScore = 0;
+let computerScore = 0;
+
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice) {
     console.log("It's a tie!");
@@ -34,7 +29,6 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-// Function to play the full game
 function playGame() {
   for (let i = 0; i < 5; i++) {
     const humanChoice = getHumanChoice();
@@ -53,5 +47,4 @@ function playGame() {
   }
 }
 
-// Start the game
 playGame();
