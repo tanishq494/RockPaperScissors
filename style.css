@@ -1,66 +1,93 @@
 body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #0b1220;
+    color: #fff;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100vh;
-    background-color: #f4f4f4;
-    font-family: Arial, sans-serif;
-    margin: 0;
-}
-
-.container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 90%;
-    max-width: 800px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#scoreboard {
+    background: #1c2230;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#scoreboard h2 {
     margin-bottom: 10px;
-    white-space: nowrap;
 }
 
-.scoreboard {
-    font-weight: bold;
-    text-align: left;
-}
-
-.controls {
+#container {
     display: flex;
-    gap: 10px;
+    gap: 30px;
+    margin-bottom: 30px;
 }
 
-button {
-    background-color: #007bff;
-    color: white;
+#container button {
+    width: 100px;
+    height: 100px;
     border: none;
-    padding: 10px 15px;
-    margin: 5px;
-    border-radius: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s;
+    padding: 0;
+    transition: transform 0.2s ease-in-out;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-button:hover {
-    background-color: #0056b3;
+#rock {
+    background-image: url('rock.png');
+    border: 8px solid #f04747;
 }
 
-.result {
+#paper {
+    background-image: url('paper.png');
+    border: 8px solid #3c8ed9;
+}
+
+#scissors {
+    background-image: url('scissors.png');
+    border: 8px solid #f0c330;
+}
+
+#container button:hover {
+    transform: scale(1.1);
+}
+
+#result {
+    font-size: 1.4rem;
     font-weight: bold;
-    text-align: left;
+    margin-bottom: 20px;
 }
 
-.play-again {
+#playAgain {
     display: none;
-    margin-left: 10px;
+    background-color: #fff;
+    color: #0b1220;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#playAgain:hover {
+    background-color: #dddddd;
 }
